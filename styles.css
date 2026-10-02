@@ -456,3 +456,29 @@ table.tbl{width:100%; border-collapse:collapse; font-size:15px}
   .print-area td{padding:5px 8px; border-bottom:1px solid #ddd}
   .print-area td.r, .print-area th.r{text-align:right}
 }
+
+
+/* ---------- Powered by Digital Studio Co ---------- */
+.powered-by{
+  text-align:center;
+  padding:12px 20px calc(16px + env(safe-area-inset-bottom,0px));
+  font-size:11px;
+  line-height:1.4;
+  color:#8A93A6;
+}
+.powered-by a{
+  color:inherit;
+  text-decoration:none;
+}
+.powered-by a:hover{
+  color:var(--navy);
+  text-decoration:underline;
+  text-underline-offset:3px;
+}
+.powered-by strong{
+  color:var(--navy);
+  font-weight:650;
+}
+@media print{
+  .powered-by{display:none !important}
+}
