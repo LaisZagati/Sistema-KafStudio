@@ -461,7 +461,7 @@ table.tbl{width:100%; border-collapse:collapse; font-size:15px}
 /* ---------- Powered by Digital Studio Co ---------- */
 .powered-by{
   text-align:center;
-  padding:12px 20px calc(16px + env(safe-area-inset-bottom,0px));
+  padding:12px 20px 14px;
   font-size:11px;
   line-height:1.4;
   color:#8A93A6;
@@ -479,6 +479,32 @@ table.tbl{width:100%; border-collapse:collapse; font-size:15px}
   color:var(--navy);
   font-weight:650;
 }
+
+/* On mobile, keep the Digital Studio Co signature visible without requiring a swipe.
+   It sits just above the fixed navigation bar and the view gets enough bottom space
+   so app content is never hidden underneath it. */
+@media (max-width:979px){
+  .powered-by{
+    position:fixed;
+    left:0;
+    right:0;
+    bottom:calc(var(--tab-h) + env(safe-area-inset-bottom,0px));
+    z-index:25;
+    background:rgba(255,255,255,.96);
+    border-top:1px solid var(--line);
+    padding:7px 16px;
+    min-height:34px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    backdrop-filter:blur(10px);
+    -webkit-backdrop-filter:blur(10px);
+  }
+  .view{
+    padding-bottom:calc(var(--tab-h) + 62px + env(safe-area-inset-bottom,0px));
+  }
+}
+
 @media print{
   .powered-by{display:none !important}
 }
