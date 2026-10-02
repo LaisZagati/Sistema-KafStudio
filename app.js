@@ -991,7 +991,7 @@ function viewMore() {
 <section class="section"><div class="section-title"><h2>Formas de pagamento</h2>
       <p class="meta" style="margin:10px 2px 0">Os dados ficam salvos neste aparelho, neste navegador${S.dataset === "demo" ? ". <b>Você está vendo dados de demonstração.</b>" : "."} Baixe um backup de vez em quando.</p>
     </section>
-    <div class="about"><img src="logo.svg" alt="KAF Studio Pilates">Gestão de alunas e mensalidades</div>`;
+    <div class="about"><img src="logo.svg" alt="KAF Studio Pilates">Gestão de alunos e mensalidades</div>`;
 }
 
 const VIEWS = {
