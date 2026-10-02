@@ -508,3 +508,183 @@ table.tbl{width:100%; border-collapse:collapse; font-size:15px}
 @media print{
   .powered-by{display:none !important}
 }
+
+/* =========================================================
+   KAF Studio — Login
+   ========================================================= */
+
+#kaf-login {
+  position: fixed;
+  inset: 0;
+  z-index: 99999;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 24px;
+
+  background: var(--bg, #F3F5F9);
+}
+
+.kaf-login-card {
+  width: min(100%, 420px);
+
+  padding: 40px;
+
+  background: #ffffff;
+
+  border: 1px solid var(--line, #E4E8F0);
+  border-radius: 22px;
+
+  box-shadow:
+    0 10px 30px rgba(23,35,63,.08),
+    0 2px 8px rgba(23,35,63,.04);
+
+  text-align: center;
+}
+
+.kaf-login-logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  margin-bottom: 24px;
+}
+
+.kaf-login-logo img {
+  width: 180px;
+  height: auto;
+  max-width: 180px;
+  display: block;
+}
+
+.kaf-login-card h1 {
+  margin: 0 0 8px;
+
+  color: var(--ink, #17233F);
+
+  font-size: 26px;
+  font-weight: 700;
+}
+
+.kaf-login-subtitle {
+  margin: 0 0 28px;
+
+  color: var(--muted, #66718A);
+
+  font-size: 15px;
+}
+
+#kaf-login-form {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+
+  text-align: left;
+}
+
+#kaf-login-form label {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+
+  color: var(--ink, #17233F);
+
+  font-size: 14px;
+  font-weight: 600;
+}
+
+#kaf-login-form input {
+  width: 100%;
+
+  padding: 13px 14px;
+
+  border: 1px solid var(--line, #E4E8F0);
+  border-radius: 10px;
+
+  background: #ffffff;
+
+  font-size: 16px;
+
+  outline: none;
+
+  transition:
+    border-color .2s ease,
+    box-shadow .2s ease;
+}
+
+#kaf-login-form input:focus {
+  border-color: var(--navy, #294582);
+
+  box-shadow:
+    0 0 0 3px rgba(41,69,130,.10);
+}
+
+#kaf-login-button {
+  width: 100%;
+
+  margin-top: 4px;
+
+  padding: 14px 18px;
+
+  border-radius: 10px;
+
+  background: var(--navy, #294582);
+  color: #ffffff;
+
+  font-size: 16px;
+  font-weight: 700;
+
+  transition:
+    opacity .2s ease,
+    transform .1s ease;
+}
+
+#kaf-login-button:hover {
+  opacity: .92;
+}
+
+#kaf-login-button:active {
+  transform: translateY(1px);
+}
+
+#kaf-login-button:disabled {
+  opacity: .6;
+  cursor: not-allowed;
+}
+
+.kaf-login-message {
+  min-height: 20px;
+
+  margin: 0;
+
+  color: #B92B2B;
+
+  font-size: 14px;
+  text-align: center;
+}
+
+
+/* ---------- Mobile ---------- */
+
+@media (max-width: 520px) {
+
+  #kaf-login {
+    padding: 16px;
+  }
+
+  .kaf-login-card {
+    padding: 30px 22px;
+    border-radius: 18px;
+  }
+
+  .kaf-login-logo img {
+    width: 150px;
+    max-width: 150px;
+  }
+
+  .kaf-login-card h1 {
+    font-size: 23px;
+  }
+}
