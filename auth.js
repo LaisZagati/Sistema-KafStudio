@@ -151,8 +151,6 @@ async function loadUserProfile() {
 /* ---------- SESSION ---------- */
 
 async function initializeAuth() {
-  createLoginScreen();
-
   const {
     data: { session },
     error,
@@ -161,6 +159,7 @@ async function initializeAuth() {
   if (error) {
     console.error("Erro ao verificar sessão:", error);
 
+    createLoginScreen();
     return;
   }
 
@@ -177,6 +176,8 @@ async function initializeAuth() {
 
     console.log("KAF Studio — permissões:", currentPermissions);
   } else {
+    createLoginScreen();
+
     console.log("KAF Studio — nenhum usuário autenticado.");
   }
 }
